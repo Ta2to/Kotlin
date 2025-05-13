@@ -1,0 +1,12 @@
+fun main() {
+    val winningBid = Bid(5000, "Private Collector")
+    
+    println("Tralalelo Tralala is sold at ${auctionPrice(winningBid, 500)}.")
+    println("Skibidi Unc is sold at ${auctionPrice(null, 300)}.")
+}
+
+class Bid(val amount: Int, val bidder: String)
+
+fun auctionPrice(bid: Bid?, minimumPrice: Int): Int {
+    return bid?.amount ?: minimumPrice
+}
